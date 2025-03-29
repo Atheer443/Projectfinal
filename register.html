@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تواصل معنا - استكشف السعودية</title>
+    <title>إنشاء حساب - استكشف السعودية</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css/contact-us.css">
+    <link rel="stylesheet" href="css/register.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -25,7 +25,7 @@
                 </ul>
             </nav>
             <div class="auth-nav">
-                <a href="login.html">تسجيل الدخول</a> / <a href="register.html">إنشاء حساب</a>
+                <a href="login.html">تسجيل الدخول</a> / <a href="register.html" class="active">إنشاء حساب</a>
                 <a href="favorites.html" class="favorite"><i class="fas fa-heart"></i></a>
             </div>
             <div class="mobile-menu-toggle">
@@ -34,18 +34,11 @@
         </div>
     </header>
 
-    <section class="contact-header">
+    <main class="register-page">
         <div class="container">
-            <h1>تواصل معنا</h1>
-            <p class="sub-description">نحن هنا من أجلك. يسعدنا سماع آرائك واستفساراتك في أي وقت.</p>
-        </div>
-    </section>
-
-    <section class="contact-content">
-        <div class="container">
-            <div class="contact-form">
-                <h2>أرسل لنا رسالة</h2>
-                <form id="contactForm">
+            <section class="register-section">
+                <h2>إنشاء حساب</h2>
+                <form id="registerForm">
                     <div class="form-group">
                         <label for="fullName">الاسم الكامل:</label>
                         <input type="text" id="fullName" name="fullName" required>
@@ -57,43 +50,23 @@
                         <div class="error-message" id="emailError"></div>
                     </div>
                     <div class="form-group">
-                        <label for="subject">عنوان الرسالة (اختياري):</label>
-                        <input type="text" id="subject" name="subject">
+                        <label for="password">كلمة المرور:</label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="error-message" id="passwordError"></div>
                     </div>
                     <div class="form-group">
-                        <label for="message">نص الرسالة:</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                        <div class="error-message" id="messageError"></div>
+                        <label for="confirmPassword">تأكيد كلمة المرور:</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <div class="error-message" id="confirmPasswordError"></div>
                     </div>
-                    <button type="submit" class="submit-button">أرسل رسالتك</button>
-                    <div class="success-message" id="successMessage"></div>
-                    <div class="error-message" id="submissionError"></div>
+                    <button type="submit" class="submit-button">إنشاء حساب</button>
                 </form>
-            </div>
-            <div class="contact-info">
-                <h2>معلومات التواصل</h2>
-                <ul class="contact-details">
-                    <li><i class="fas fa-envelope"></i> <span id="officialEmail">info@explore-saudi.com</span></li>
-                    <li><i class="fas fa-phone"></i> <span id="phoneNumber">+966 5XXXXXXXXX</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span id="officeLocation">موقع افتراضي في الرياض، المملكة العربية السعودية</span></li>
-                </ul>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <div class="login-link">
+                    <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
                 </div>
-            </div>
+            </section>
         </div>
-    </section>
-
-    <section class="contact-map">
-        <div class="container">
-            <h2>موقعنا على الخريطة</h2>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d434549.7853362433!2d46.53428307812501!3d24.720349999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1edcac9869!2z2KfZhNmF2YbYqQ!5e0!3m2!1sar!2ssa!4v1708000000000" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer>
         <div class="container">
@@ -103,8 +76,6 @@
                     <li><a href="destinations.html">الوجهات</a></li>
                     <li><a href="about-us.html">من نحن</a></li>
                     <li><a href="contact-us.html">تواصل معنا</a></li>
-                    <li><a href="login.html">تسجيل الدخول</a></li>
-                    <li><a href="register.html">إنشاء حساب</a></li>
                 </ul>
             </div>
             <div class="social-icons">
@@ -116,13 +87,10 @@
             <div class="copyright">
                 <p>© 2025 استكشف السعودية - جميع الحقوق محفوظة.</p>
             </div>
-            <div class="closing-message">
-                <p>"استكشف. استمتع. شاركنا رحلتك."</p>
-            </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
-    <script src="js/contact-us.js"></script>
+  
 </body>
 </html>
